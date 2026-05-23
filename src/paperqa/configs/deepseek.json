@@ -1,0 +1,21 @@
+{
+  "llm": "deepseek/deepseek-v4-pro",
+  "summary_llm": "deepseek/deepseek-v4-pro",
+  "agent": {
+    "agent_llm": "deepseek/deepseek-v4-pro"
+  },
+  "parsing": {
+    "enrichment_llm": "deepseek/deepseek-v4-pro",
+    "multimodal": false,
+    "use_doc_details": true,
+    "reader_config": {
+      "chunk_chars": 7000,
+      "overlap": 250
+    }
+  },
+  "answer": {
+    "evidence_k": 20,
+    "answer_max_sources": 5,
+    "max_concurrent_requests": 10
+  }
+}

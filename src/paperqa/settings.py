@@ -729,19 +729,22 @@ def make_default_litellm_model_list_settings(
     llm: str, temperature: float = 0.0
 ) -> dict:
     """Settings matching "model_list" schema here: https://docs.litellm.ai/docs/routing."""
+    litellm_params: dict[str, Any] = {
+        "model": llm,
+        "temperature": temperature,
+    }
+    # Only add Anthropic-specific cache control for Anthropic models
+    # SEE: https://docs.litellm.ai/docs/tutorials/prompt_caching#litellm-python-sdk-usage
+    if "anthropic" in llm or "claude" in llm:
+        litellm_params["cache_control_injection_points"] = [
+            {"location": "message", "role": "system"}
+        ]
     return {
         "name": llm,
         "model_list": [
             {
                 "model_name": llm,
-                "litellm_params": {
-                    "model": llm,
-                    "temperature": temperature,
-                    # SEE: https://docs.litellm.ai/docs/tutorials/prompt_caching#litellm-python-sdk-usage
-                    "cache_control_injection_points": [
-                        {"location": "message", "role": "system"}
-                    ],
-                },
+                "litellm_params": litellm_params,
             }
         ],
     }
