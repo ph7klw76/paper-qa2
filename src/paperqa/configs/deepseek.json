@@ -1,6 +1,7 @@
 {
   "llm": "deepseek/deepseek-v4-pro",
   "summary_llm": "deepseek/deepseek-v4-pro",
+  "embedding": "st-multi-qa-MiniLM-L6-cos-v1",
   "agent": {
     "agent_llm": "deepseek/deepseek-v4-pro"
   },
