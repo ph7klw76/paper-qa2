@@ -94,6 +94,10 @@ ldp = [
 local = [
     "sentence-transformers",
 ]
+mcp = [
+    "mcp>=1.0.0",
+    "paper-qa2[local]",
+]
 memory = [
     "paper-qa2[ldp]",
     "usearch>=2.16.4",  # Pin for Python 3.13 support
