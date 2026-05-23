@@ -8,7 +8,7 @@ dev = [
     "paper-qa-nemotron[dev]",
     "paper-qa-pymupdf[dev]",
     "paper-qa-pypdf[dev]",
-    "paper-qa[dev]",
+    "paper-qa2[dev]",
 ]
 
 [project]
@@ -54,7 +54,7 @@ maintainers = [
     {email = "michael.skarlinski@gmail.com", name = "Michael Skarlinski"},
     {email = "white.d.andrew@gmail.com", name = "Andrew White"},
 ]
-name = "paper-qa"
+name = "paper-qa2"
 readme = "README.md"
 requires-python = ">=3.11"
 
@@ -66,7 +66,7 @@ dev = [
     "ipython>=8",  # Pin to keep recent
     "litellm>=1.81.14",  # Lower pin for Anthropic empty system messages fix in https://github.com/BerriAI/litellm/pull/21630
     "mypy>=1.19",  # Pin for zip default detection
-    "paper-qa[docling,image,ldp,memory,nemotron,pypdf-media,pymupdf,typing,zotero,local,qdrant,office]",
+    "paper-qa2[docling,image,ldp,memory,nemotron,pypdf-media,pymupdf,typing,zotero,local,qdrant,office]",
     "prek<0.2.15",  # Downpin for https://github.com/j178/prek/issues/1104
     "pydantic~=2.11",  # Pin for start of model_fields deprecation
     "pylint-per-file-ignores",
@@ -95,7 +95,7 @@ local = [
     "sentence-transformers",
 ]
 memory = [
-    "paper-qa[ldp]",
+    "paper-qa2[ldp]",
     "usearch>=2.16.4",  # Pin for Python 3.13 support
 ]
 nemotron = ["paper-qa-nemotron"]
@@ -126,8 +126,8 @@ zotero = [
 pqa = "paperqa.agents:main"
 
 [project.urls]
-issues = "https://github.com/Future-House/paper-qa/issues"
-repository = "https://github.com/Future-House/paper-qa"
+issues = "https://github.com/ph7klw76/paper-qa2/issues"
+repository = "https://github.com/ph7klw76/paper-qa2"
 
 [tool.black]
 preview = true
@@ -653,7 +653,7 @@ extend-exclude = [
 ]
 
 [tool.uv.sources]
-paper-qa = {workspace = true}
+paper-qa2 = {workspace = true}
 paper-qa-docling = {workspace = true}
 paper-qa-nemotron = {workspace = true}
 paper-qa-pymupdf = {workspace = true}

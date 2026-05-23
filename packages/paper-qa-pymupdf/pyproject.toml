@@ -19,7 +19,7 @@ classifiers = [
 ]
 dependencies = [
     "PyMuPDF>=1.24.12",  # For pymupdf.set_messages addition
-    "paper-qa",
+    "paper-qa2",
 ]
 description = "PaperQA readers implemented using PyMuPDF"
 dynamic = ["version"]
@@ -37,7 +37,7 @@ requires-python = ">=3.11"
 dev = [
     "PyMuPDF>=1.27.2.2",  # Lower pin for typing fix on Page.find_tables
     "fhlmi>=0.39",  # Pin for bytes_to_string
-    "paper-qa>=5.23",  # Pin for PDFParserFn
+    "paper-qa2>=5.23",  # Pin for PDFParserFn
     "pytest-asyncio",
     "pytest>=8",  # Pin to keep recent
 ]

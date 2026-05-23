@@ -20,7 +20,7 @@ classifiers = [
 dependencies = [
     "docling-core>=2",  # Pin for v2 with DocItem, TextItem, etc.
     "docling>=2.74",  # Pin for moving to DoclingParseDocumentBackend in https://github.com/docling-project/docling/pull/2872
-    "paper-qa",
+    "paper-qa2",
 ]
 description = "PaperQA readers implemented using Docling"
 dynamic = ["version"]
@@ -38,7 +38,7 @@ requires-python = ">=3.11"
 dev = [
     "docling-ibm-models[opencv-python-headless]>=3.10.0",  # Lower pin and specify opencv after https://github.com/docling-project/docling-ibm-models/pull/130
     "fhlmi>=0.39",  # Pin for bytes_to_string
-    "paper-qa>=5.23",  # Pin for PDFParserFn
+    "paper-qa2>=5.23",  # Pin for PDFParserFn
     "pytest-asyncio",
     "pytest>=8",  # Pin to keep recent
 ]

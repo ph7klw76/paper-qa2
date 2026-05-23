@@ -19,7 +19,7 @@ classifiers = [
 ]
 dependencies = [
     "PyPDF>=3",  # Pin since v1 doesn't work and there's no v2 on PyPI
-    "paper-qa",
+    "paper-qa2",
 ]
 description = "PaperQA readers implemented using PyPDF"
 dynamic = ["version"]
@@ -37,7 +37,7 @@ requires-python = ">=3.11"
 dev = [
     "fhlmi>=0.39",  # Pin for bytes_to_string
     "paper-qa-pypdf[enhanced,media]",
-    "paper-qa>=5.23",  # Pin for PDFParserFn
+    "paper-qa2>=5.23",  # Pin for PDFParserFn
     "pytest-asyncio",
     "pytest-rerunfailures",
     "pytest>=8",  # Pin to keep recent

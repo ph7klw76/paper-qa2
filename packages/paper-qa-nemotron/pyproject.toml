@@ -23,7 +23,7 @@ dependencies = [
     "fhlmi>=0.27.0",  # Pin for request_limited
     "litellm>=1.71.0",  # Pin for aiohttp transport optimization
     "numpy",
-    "paper-qa",
+    "paper-qa2",
     "pypdfium2>=4.22.0",  # Pin for PYPDFIUM_INFO addition
     "tenacity",
 ]
@@ -45,7 +45,7 @@ dev = [
     "fhlmi>=0.39",  # Pin for bytes_to_string
     "httpx-aiohttp",
     "paper-qa-nemotron[sagemaker,typing]",
-    "paper-qa>=5.23",  # Pin for PDFParserFn
+    "paper-qa2>=5.23",  # Pin for PDFParserFn
     "pytest-asyncio",
     "pytest-recording",
     "pytest-rerunfailures",
